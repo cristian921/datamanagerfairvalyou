@@ -9,6 +9,7 @@ import com.fairvalyou.datamanger.domain.node.User;
 import com.fairvalyou.datamanger.relationship.ParentOf;
 import com.fairvalyou.datamanger.services.ParentOfService;
 import com.fairvalyou.datamanger.services.UserService;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,7 +54,7 @@ public class UserController {
     }
     
     @GetMapping("/findAll")
-    public Iterable<User> findAll(){
+    public List<User> findAll(){
         return userService.findAll();
     }
     
