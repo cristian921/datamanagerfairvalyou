@@ -42,6 +42,21 @@ public class UserController {
         userService.delete(userService.findByName(name));
     }
     
+    @GetMapping("/findByName")
+    public User findByName(@RequestParam String name){
+        return userService.findByName(name);
+    }
+    
+    @GetMapping("/findById")
+    public User findById(@RequestParam String id){
+        return userService.findById(Long.valueOf(id));
+    }
+    
+    @GetMapping("/findAll")
+    public Iterable<User> findAll(){
+        return userService.findAll();
+    }
+    
     @GetMapping("/addSon")
     public ParentOf addSon(@RequestParam String idParent,@RequestParam String idSon){
         return parentOfService.save(new ParentOf(userService.findById(Long.valueOf(idParent)), userService.findById(Long.valueOf(idSon))));
