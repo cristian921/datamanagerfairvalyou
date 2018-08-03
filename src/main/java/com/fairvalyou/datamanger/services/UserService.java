@@ -8,6 +8,8 @@ package com.fairvalyou.datamanger.services;
 import com.fairvalyou.datamanger.domain.node.User;
 import com.fairvalyou.datamanger.relationship.ParentOf;
 import com.fairvalyou.datamanger.repositories.UserRepository;
+import java.util.Collection;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,5 +44,10 @@ public class UserService {
     @Transactional(readOnly = true)
     public User findById(Long Id) {
         return userRepository.findById(Id).get();
+    }
+    
+    @Transactional(readOnly = true)
+    public List<User> findAll(){
+        return (List<User>) userRepository.findAll();
     }
 }
