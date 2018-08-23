@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package com.fairvalyou.datamanger.relationship;
+
 import com.fairvalyou.datamanger.domain.DomainObject;
-import com.fairvalyou.datamanger.domain.node.User;
+import com.fairvalyou.datamanger.domain.node.GenericUser;
 import org.neo4j.ogm.annotation.EndNode;
 
 import org.neo4j.ogm.annotation.RelationshipEntity;
@@ -19,33 +20,32 @@ import org.neo4j.ogm.annotation.StartNode;
 public class ParentOf extends DomainObject {
 
     @StartNode
-    private User parent;
+    private GenericUser parent;
     @EndNode
-    private User son;
+    private GenericUser son;
 
     public ParentOf() {
     }
 
-    public ParentOf(User parent, User son) {
+    public ParentOf(GenericUser parent, GenericUser son) {
         this.parent = parent;
         this.son = son;
     }
 
-    public User getParent() {
+    public GenericUser getParent() {
         return parent;
     }
 
-    public void setParent(User parent) {
+    public void setParent(GenericUser parent) {
         this.parent = parent;
     }
 
-    public User getSon() {
+    public GenericUser getSon() {
         return son;
     }
 
-    public void setSon(User son) {
+    public void setSon(GenericUser son) {
         this.son = son;
     }
 
-    
 }

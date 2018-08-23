@@ -8,7 +8,7 @@ import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 @EnableNeo4jRepositories("com.fairvalyou.datamanger.repositories")
 public class DatamangerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DatamangerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DatamangerApplication.class, args);
+    }
 }

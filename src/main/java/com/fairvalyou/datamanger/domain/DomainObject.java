@@ -18,7 +18,7 @@ public abstract class DomainObject {
 
     @Id
     @GeneratedValue
-    private Long id;
+    public Long id;
 
     public DomainObject() {
     }
