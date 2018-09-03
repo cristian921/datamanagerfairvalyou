@@ -30,6 +30,7 @@ public class GenericUser extends DomainObject{
     private String domicileProvince;
     private String domicileNation;
     private String qualification;
+    protected String type;
     
     public GenericUser() {
         super();
