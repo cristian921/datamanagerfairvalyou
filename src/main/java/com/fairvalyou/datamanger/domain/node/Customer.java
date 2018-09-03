@@ -13,5 +13,5 @@ import org.neo4j.ogm.annotation.NodeEntity;
  */
 @NodeEntity(label = "Customer")
 public class Customer extends GenericUser{
-    
+    private String type = "Customer";
 }

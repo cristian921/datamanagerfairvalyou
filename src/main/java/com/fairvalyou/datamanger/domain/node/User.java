@@ -5,15 +5,8 @@
  */
 package com.fairvalyou.datamanger.domain.node;
 
-
-import com.fairvalyou.datamanger.domain.DomainObject;
-import com.fairvalyou.datamanger.relationship.ParentOf;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Property;
-import org.neo4j.ogm.annotation.Relationship;
+
 
 
 /**
@@ -22,5 +15,5 @@ import org.neo4j.ogm.annotation.Relationship;
  */
 @NodeEntity(label = "User")
 public class User extends GenericUser {
-
+    private String type = "User";
 }
