@@ -177,6 +177,15 @@ public class GenericUser extends DomainObject{
         this.qualification = qualification;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 7;
