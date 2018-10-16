@@ -100,6 +100,7 @@ public class GenericUserService {
 
     @Transactional(readOnly = false)
     public void upload(MultipartFile file) throws IOException, InvalidFormatException {
+  
         fileName = file.getOriginalFilename();
         File convFile = new File("src\\main\\resources\\upload\\" + file.getOriginalFilename());
         convFile.createNewFile();
@@ -108,8 +109,9 @@ public class GenericUserService {
         }
     }
 
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = false)
     public void load() throws IOException, InvalidFormatException {
+        System.out.println(fileName);
         try ( // Creating a Workbook from an Excel file (.xls or .xlsx)
                 Workbook workbook = WorkbookFactory.create(new File("src\\main\\resources\\upload\\" + fileName))) {
             workbook.forEach(sheet -> {

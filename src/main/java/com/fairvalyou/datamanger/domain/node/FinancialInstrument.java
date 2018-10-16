@@ -19,65 +19,72 @@ public class FinancialInstrument extends DomainObject{
     private String currency;
     private String class_;
     private String sicavName;
-    private String currentYearReturn;
-    private String oneYearReturn;
-    private String threeYearReturn;
-    private String fiveYearReturn;
-    private String tenYearReturn;
-    private String currentYearVolatility;
-    private String oneYearVolatility;
-    private String threeYearVolatility;
-    private String fiveYearVolatility;
-    private String tenYearVolatility;
-    private String currentYearNegativeVolatility;
-    private String oneYearNegativeVolatility;
-    private String threeYearNegativeVolatility;
-    private String fiveYearNegativeVolatility;
-    private String tenYearNegativeVolatility;
-    private String oneYearSharpe;
-    private String threeYearSharpe;
-    private String fiveYearSharpe;
-    private String oneYearDrawdown;
-    private String threeYearDrawdown;
-    private String fiveYearDrawdown;
-    private String currentYearAnnualisedReturn;
-    private String oneYearAnnualisedReturn;
-    private String threeYearAnnualisedReturn;
-    private String fiveYearAnnualisedReturn;
-    private String tenYearAnnualisedReturn;
+    private String categoryAssogestioni;
+    
+    private Double currentYearReturn;
+    private Double oneYearReturn;
+    private Double threeYearReturn;
+    private Double fiveYearReturn;
+    private Double tenYearReturn;
+    
+    private Double oneYearVolatility;
+    private Double threeYearVolatility;
+    private Double fiveYearVolatility;
+    private Double tenYearVolatility;
+
+    private Double oneYearNegativeVolatility;
+    private Double threeYearNegativeVolatility;
+    private Double fiveYearNegativeVolatility;
+
+    private Double oneYearSharpe;
+    private Double threeYearSharpe;
+    private Double fiveYearSharpe;
+    
+    private Double oneYearSortino;
+    private Double threeYearSortino;
+    private Double fiveYearSortino;
+    
+    private Double oneYearDrawdown;
+    private Double threeYearDrawdown;
+    private Double fiveYearDrawdown;
+    
+    private Double currentYearAnnualisedReturn;
+    private Double threeYearAnnualisedReturn;
+    private Double fiveYearAnnualisedReturn;
+    private Double tenYearAnnualisedReturn;
 
     public FinancialInstrument() {
     }
 
-    public FinancialInstrument(String isin, String name, String currency, String class_, String sicavName, String currentYearReturn, String oneYearReturn, String threeYearReturn, String fiveYearReturn, String tenYearReturn, String currentYearVolatility, String oneYearVolatility, String threeYearVolatility, String fiveYearVolatility, String tenYearVolatility, String currentYearNegativeVolatility, String oneYearNegativeVolatility, String threeYearNegativeVolatility, String fiveYearNegativeVolatility, String tenYearNegativeVolatility, String oneYearSharpe, String threeYearSharpe, String fiveYearSharpe, String oneYearDrawdown, String threeYearDrawdown, String fiveYearDrawdown, String currentYearAnnualisedReturn, String oneYearAnnualisedReturn, String threeYearAnnualisedReturn, String fiveYearAnnualisedReturn, String tenYearAnnualisedReturn) {
+    public FinancialInstrument(String isin, String name, String currency, String class_, String sicavName, String categoryAssogestioni, Double currentYearReturn, Double oneYearReturn, Double threeYearReturn, Double fiveYearReturn, Double tenYearReturn, Double oneYearVolatility, Double threeYearVolatility, Double fiveYearVolatility, Double tenYearVolatility, Double oneYearNegativeVolatility, Double threeYearNegativeVolatility, Double fiveYearNegativeVolatility, Double oneYearSharpe, Double threeYearSharpe, Double fiveYearSharpe, Double oneYearSortino, Double threeYearSortino, Double fiveYearSortino, Double oneYearDrawdown, Double threeYearDrawdown, Double fiveYearDrawdown, Double currentYearAnnualisedReturn, Double threeYearAnnualisedReturn, Double fiveYearAnnualisedReturn, Double tenYearAnnualisedReturn) {
         this.isin = isin;
         this.name = name;
         this.currency = currency;
         this.class_ = class_;
         this.sicavName = sicavName;
+        this.categoryAssogestioni = categoryAssogestioni;
         this.currentYearReturn = currentYearReturn;
         this.oneYearReturn = oneYearReturn;
         this.threeYearReturn = threeYearReturn;
         this.fiveYearReturn = fiveYearReturn;
         this.tenYearReturn = tenYearReturn;
-        this.currentYearVolatility = currentYearVolatility;
         this.oneYearVolatility = oneYearVolatility;
         this.threeYearVolatility = threeYearVolatility;
         this.fiveYearVolatility = fiveYearVolatility;
         this.tenYearVolatility = tenYearVolatility;
-        this.currentYearNegativeVolatility = currentYearNegativeVolatility;
         this.oneYearNegativeVolatility = oneYearNegativeVolatility;
         this.threeYearNegativeVolatility = threeYearNegativeVolatility;
         this.fiveYearNegativeVolatility = fiveYearNegativeVolatility;
-        this.tenYearNegativeVolatility = tenYearNegativeVolatility;
         this.oneYearSharpe = oneYearSharpe;
         this.threeYearSharpe = threeYearSharpe;
         this.fiveYearSharpe = fiveYearSharpe;
+        this.oneYearSortino = oneYearSortino;
+        this.threeYearSortino = threeYearSortino;
+        this.fiveYearSortino = fiveYearSortino;
         this.oneYearDrawdown = oneYearDrawdown;
         this.threeYearDrawdown = threeYearDrawdown;
         this.fiveYearDrawdown = fiveYearDrawdown;
         this.currentYearAnnualisedReturn = currentYearAnnualisedReturn;
-        this.oneYearAnnualisedReturn = oneYearAnnualisedReturn;
         this.threeYearAnnualisedReturn = threeYearAnnualisedReturn;
         this.fiveYearAnnualisedReturn = fiveYearAnnualisedReturn;
         this.tenYearAnnualisedReturn = tenYearAnnualisedReturn;
@@ -123,212 +130,215 @@ public class FinancialInstrument extends DomainObject{
         this.sicavName = sicavName;
     }
 
-    public String getCurrentYearReturn() {
+    public String getCategoryAssogestioni() {
+        return categoryAssogestioni;
+    }
+
+    public void setCategoryAssogestioni(String categoryAssogestioni) {
+        this.categoryAssogestioni = categoryAssogestioni;
+    }
+
+    public Double getCurrentYearReturn() {
         return currentYearReturn;
     }
 
-    public void setCurrentYearReturn(String currentYearReturn) {
+    public void setCurrentYearReturn(Double currentYearReturn) {
         this.currentYearReturn = currentYearReturn;
     }
 
-    public String getOneYearReturn() {
+    public Double getOneYearReturn() {
         return oneYearReturn;
     }
 
-    public void setOneYearReturn(String oneYearReturn) {
+    public void setOneYearReturn(Double oneYearReturn) {
         this.oneYearReturn = oneYearReturn;
     }
 
-    public String getThreeYearReturn() {
+    public Double getThreeYearReturn() {
         return threeYearReturn;
     }
 
-    public void setThreeYearReturn(String threeYearReturn) {
+    public void setThreeYearReturn(Double threeYearReturn) {
         this.threeYearReturn = threeYearReturn;
     }
 
-    public String getFiveYearReturn() {
+    public Double getFiveYearReturn() {
         return fiveYearReturn;
     }
 
-    public void setFiveYearReturn(String fiveYearReturn) {
+    public void setFiveYearReturn(Double fiveYearReturn) {
         this.fiveYearReturn = fiveYearReturn;
     }
 
-    public String getTenYearReturn() {
+    public Double getTenYearReturn() {
         return tenYearReturn;
     }
 
-    public void setTenYearReturn(String tenYearReturn) {
+    public void setTenYearReturn(Double tenYearReturn) {
         this.tenYearReturn = tenYearReturn;
     }
 
-    public String getCurrentYearVolatility() {
-        return currentYearVolatility;
-    }
-
-    public void setCurrentYearVolatility(String currentYearVolatility) {
-        this.currentYearVolatility = currentYearVolatility;
-    }
-
-    public String getOneYearVolatility() {
+    public Double getOneYearVolatility() {
         return oneYearVolatility;
     }
 
-    public void setOneYearVolatility(String oneYearVolatility) {
+    public void setOneYearVolatility(Double oneYearVolatility) {
         this.oneYearVolatility = oneYearVolatility;
     }
 
-    public String getThreeYearVolatility() {
+    public Double getThreeYearVolatility() {
         return threeYearVolatility;
     }
 
-    public void setThreeYearVolatility(String threeYearVolatility) {
+    public void setThreeYearVolatility(Double threeYearVolatility) {
         this.threeYearVolatility = threeYearVolatility;
     }
 
-    public String getFiveYearVolatility() {
+    public Double getFiveYearVolatility() {
         return fiveYearVolatility;
     }
 
-    public void setFiveYearVolatility(String fiveYearVolatility) {
+    public void setFiveYearVolatility(Double fiveYearVolatility) {
         this.fiveYearVolatility = fiveYearVolatility;
     }
 
-    public String getTenYearVolatility() {
+    public Double getTenYearVolatility() {
         return tenYearVolatility;
     }
 
-    public void setTenYearVolatility(String tenYearVolatility) {
+    public void setTenYearVolatility(Double tenYearVolatility) {
         this.tenYearVolatility = tenYearVolatility;
     }
 
-    public String getCurrentYearNegativeVolatility() {
-        return currentYearNegativeVolatility;
-    }
-
-    public void setCurrentYearNegativeVolatility(String currentYearNegativeVolatility) {
-        this.currentYearNegativeVolatility = currentYearNegativeVolatility;
-    }
-
-    public String getOneYearNegativeVolatility() {
+    public Double getOneYearNegativeVolatility() {
         return oneYearNegativeVolatility;
     }
 
-    public void setOneYearNegativeVolatility(String oneYearNegativeVolatility) {
+    public void setOneYearNegativeVolatility(Double oneYearNegativeVolatility) {
         this.oneYearNegativeVolatility = oneYearNegativeVolatility;
     }
 
-    public String getThreeYearNegativeVolatility() {
+    public Double getThreeYearNegativeVolatility() {
         return threeYearNegativeVolatility;
     }
 
-    public void setThreeYearNegativeVolatility(String threeYearNegativeVolatility) {
+    public void setThreeYearNegativeVolatility(Double threeYearNegativeVolatility) {
         this.threeYearNegativeVolatility = threeYearNegativeVolatility;
     }
 
-    public String getFiveYearNegativeVolatility() {
+    public Double getFiveYearNegativeVolatility() {
         return fiveYearNegativeVolatility;
     }
 
-    public void setFiveYearNegativeVolatility(String fiveYearNegativeVolatility) {
+    public void setFiveYearNegativeVolatility(Double fiveYearNegativeVolatility) {
         this.fiveYearNegativeVolatility = fiveYearNegativeVolatility;
     }
 
-    public String getTenYearNegativeVolatility() {
-        return tenYearNegativeVolatility;
-    }
-
-    public void setTenYearNegativeVolatility(String tenYearNegativeVolatility) {
-        this.tenYearNegativeVolatility = tenYearNegativeVolatility;
-    }
-
-    public String getOneYearSharpe() {
+    public Double getOneYearSharpe() {
         return oneYearSharpe;
     }
 
-    public void setOneYearSharpe(String oneYearSharpe) {
+    public void setOneYearSharpe(Double oneYearSharpe) {
         this.oneYearSharpe = oneYearSharpe;
     }
 
-    public String getThreeYearSharpe() {
+    public Double getThreeYearSharpe() {
         return threeYearSharpe;
     }
 
-    public void setThreeYearSharpe(String threeYearSharpe) {
+    public void setThreeYearSharpe(Double threeYearSharpe) {
         this.threeYearSharpe = threeYearSharpe;
     }
 
-    public String getFiveYearSharpe() {
+    public Double getFiveYearSharpe() {
         return fiveYearSharpe;
     }
 
-    public void setFiveYearSharpe(String fiveYearSharpe) {
+    public void setFiveYearSharpe(Double fiveYearSharpe) {
         this.fiveYearSharpe = fiveYearSharpe;
     }
 
-    public String getOneYearDrawdown() {
+    public Double getOneYearSortino() {
+        return oneYearSortino;
+    }
+
+    public void setOneYearSortino(Double oneYearSortino) {
+        this.oneYearSortino = oneYearSortino;
+    }
+
+    public Double getThreeYearSortino() {
+        return threeYearSortino;
+    }
+
+    public void setThreeYearSortino(Double threeYearSortino) {
+        this.threeYearSortino = threeYearSortino;
+    }
+
+    public Double getFiveYearSortino() {
+        return fiveYearSortino;
+    }
+
+    public void setFiveYearSortino(Double fiveYearSortino) {
+        this.fiveYearSortino = fiveYearSortino;
+    }
+
+    public Double getOneYearDrawdown() {
         return oneYearDrawdown;
     }
 
-    public void setOneYearDrawdown(String oneYearDrawdown) {
+    public void setOneYearDrawdown(Double oneYearDrawdown) {
         this.oneYearDrawdown = oneYearDrawdown;
     }
 
-    public String getThreeYearDrawdown() {
+    public Double getThreeYearDrawdown() {
         return threeYearDrawdown;
     }
 
-    public void setThreeYearDrawdown(String threeYearDrawdown) {
+    public void setThreeYearDrawdown(Double threeYearDrawdown) {
         this.threeYearDrawdown = threeYearDrawdown;
     }
 
-    public String getFiveYearDrawdown() {
+    public Double getFiveYearDrawdown() {
         return fiveYearDrawdown;
     }
 
-    public void setFiveYearDrawdown(String fiveYearDrawdown) {
+    public void setFiveYearDrawdown(Double fiveYearDrawdown) {
         this.fiveYearDrawdown = fiveYearDrawdown;
     }
 
-    public String getCurrentYearAnnualisedReturn() {
+    public Double getCurrentYearAnnualisedReturn() {
         return currentYearAnnualisedReturn;
     }
 
-    public void setCurrentYearAnnualisedReturn(String currentYearAnnualisedReturn) {
+    public void setCurrentYearAnnualisedReturn(Double currentYearAnnualisedReturn) {
         this.currentYearAnnualisedReturn = currentYearAnnualisedReturn;
     }
 
-    public String getOneYearAnnualisedReturn() {
-        return oneYearAnnualisedReturn;
-    }
-
-    public void setOneYearAnnualisedReturn(String oneYearAnnualisedReturn) {
-        this.oneYearAnnualisedReturn = oneYearAnnualisedReturn;
-    }
-
-    public String getThreeYearAnnualisedReturn() {
+    public Double getThreeYearAnnualisedReturn() {
         return threeYearAnnualisedReturn;
     }
 
-    public void setThreeYearAnnualisedReturn(String threeYearAnnualisedReturn) {
+    public void setThreeYearAnnualisedReturn(Double threeYearAnnualisedReturn) {
         this.threeYearAnnualisedReturn = threeYearAnnualisedReturn;
     }
 
-    public String getFiveYearAnnualisedReturn() {
+    public Double getFiveYearAnnualisedReturn() {
         return fiveYearAnnualisedReturn;
     }
 
-    public void setFiveYearAnnualisedReturn(String fiveYearAnnualisedReturn) {
+    public void setFiveYearAnnualisedReturn(Double fiveYearAnnualisedReturn) {
         this.fiveYearAnnualisedReturn = fiveYearAnnualisedReturn;
     }
 
-    public String getTenYearAnnualisedReturn() {
+    public Double getTenYearAnnualisedReturn() {
         return tenYearAnnualisedReturn;
     }
 
-    public void setTenYearAnnualisedReturn(String tenYearAnnualisedReturn) {
+    public void setTenYearAnnualisedReturn(Double tenYearAnnualisedReturn) {
         this.tenYearAnnualisedReturn = tenYearAnnualisedReturn;
     }
 
+    
+    
+    
 }

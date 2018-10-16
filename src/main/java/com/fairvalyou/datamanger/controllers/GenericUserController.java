@@ -35,69 +35,69 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/genericUsers")
 public class GenericUserController {
 
-    private final GenericUserService userService;
+    private final GenericUserService genericUserService;
 
-    public GenericUserController(GenericUserService userService) {
-        this.userService = userService;
+    public GenericUserController(GenericUserService genericUserService) {
+        this.genericUserService = genericUserService;
     }
 
     @PutMapping("/saveCustomer")
     public GenericUser save(@RequestBody Customer genericUser) {
-        return userService.save(genericUser);
+        return genericUserService.save(genericUser);
     }
     
     @PutMapping("/saveUser")
     public GenericUser save(@RequestBody User genericUser) {
-        return userService.save(genericUser);
+        return genericUserService.save(genericUser);
     }
  
     @DeleteMapping("/deleteById")
     public void deleteById(@RequestParam String id) {
-        userService.deleteById(Long.valueOf(id));
+        genericUserService.deleteById(Long.valueOf(id));
     }
  
     @GetMapping("/findByName")
     public GenericUser findByName(@RequestParam String name) {
-        return userService.findByName(name);
+        return genericUserService.findByName(name);
     }
 
     @GetMapping("/findById")
     public GenericUser findById(@RequestParam String id) {
-        return userService.findById(Long.valueOf(id));
+        return genericUserService.findById(Long.valueOf(id));
     }
 
     @GetMapping("/findAll")
     public List<GenericUser> findAll() {
-        return userService.findAll();
+        return genericUserService.findAll();
     }
 
     @GetMapping("/findAllPageable")
     public Page<GenericUser> findAll(@RequestParam int page,@RequestParam int size) {
-        return userService.findAllPagination(PageRequest.of(page, size,Sort.Direction.ASC, "name"));
+        return genericUserService.findAllPagination(PageRequest.of(page, size,Sort.Direction.ASC, "name"));
     }
     
     @GetMapping("/findAllCustomer")
     public List<Customer> findCustomer(){
-        return userService.findAllCustomer();
+        return genericUserService.findAllCustomer();
     }
     
     @GetMapping("/findAllUser")
     public List<User> findUser(){
-        return userService.findAllUser();
+        return genericUserService.findAllUser();
     }
     
     @GetMapping("/findAllUsersWithOutRelationshipByUserId")
     public List<GenericUser> findUsersWithOutRelationshipByUserId(@RequestParam String userId) {
-        return userService.findUsersWithOutRelationshipByUserId(Long.valueOf(userId));
+        return genericUserService.findUsersWithOutRelationshipByUserId(Long.valueOf(userId));
     }
     
     @PutMapping("/upload")
    public void upload(@RequestParam MultipartFile file) throws IOException, InvalidFormatException{
-       userService.upload(file);
+       genericUserService.upload(file);
    }
     
    @PutMapping("/load")
    public void load() throws IOException, InvalidFormatException{
-       userService.load();
+       genericUserService.load();
    }
 }
